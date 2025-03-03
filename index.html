@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <h2 class="logo">Delicious<span>Bites</span></h2>
+            <ul class="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><button id="darkModeToggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Delicious Food, Delivered to You</h1>
+        <p>Order your favorite meals with just a click!</p>
+        <a href="#menu" class="btn">Order Now</a>
+    </section>
+
+    <!-- Sliding Advertisement Section -->
+    <section id="offers">
+        <h2>Special Offers</h2>
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="images\double cheese pizza.jpg" alt="Discount on Pizza">
+                <p class="gradient-text">🔥 50% Off on Pizza - Limited Time!</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="images\combo buger.jpeg" alt="Burger Combo">
+                <p class="gradient-text1">🍔 Get a Free Fries with Every Burger!</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="images\delivery free.jpg" alt="Free Delivery">
+                <!-- <p>🚚 Free Delivery on Orders Above ₹299</p> -->
+                <p class="gradient-text">🚚 Free Delivery on Orders Above ₹299</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Food Menu Section -->
+<section id="menu">
+    <h2 class="menu-heading">Our Menu</h2>
+    <div class="menu-container">
+
+        <!-- Pizza Item -->
+        <div class="food-item" data-name="Pizza" data-price="250">
+            <img src="images/Pizza.jpg" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>Delicious cheesy pizza with fresh toppings.</p>
+            <div class="item">
+                <span>₹250</span>
+                <button class="decrement" data-item="Pizza">➖</button>
+                <span class="quantity" data-item="Pizza">0</span>
+                <button class="increment" data-item="Pizza">➕</button>
+            </div>
+        </div>
+
+        <!-- Burger Item -->
+        <div class="food-item" data-name="Burger" data-price="150">
+            <img src="images/Spicy Burger.jpg" alt="Burger">
+            <h3>Burger</h3>
+            <p>Juicy and tasty burger with crispy fries.</p>
+            <div class="item">
+                <span>₹150</span>
+                <button class="decrement" data-item="Burger">➖</button>
+                <span class="quantity" data-item="Burger">0</span>
+                <button class="increment" data-item="Burger">➕</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+    <!-- Cart Section -->
+    <section id="cart">
+<h3 class="cart">🛒 Your Cart</h3>
+<div id="cart-items"></div>
+<h3 class="total-price">Total: ₹0</h3>
+        <button id="checkout-btn">Checkout</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Delicious Bites | Hosted By Sourabh Shinde</p>
+    </footer>
+
+</body>
+</html>

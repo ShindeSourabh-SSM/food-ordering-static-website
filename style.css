@@ -1,0 +1,302 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background 0.3s ease;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(120deg, #ff5733, #ff8d1a);
+    color: white;
+}
+
+#hero h1 {
+    font-size: 40px;
+}
+
+.btn {
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Sliding Advertisement */
+#offers {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Carousel Container */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%; /* Increase width for better visibility */
+    max-width: 800px; /* Prevents it from getting too large */
+    height: 300px; /* Set a fixed height for consistency */
+    margin: 20px auto; /* Center align with spacing */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* For next/prev buttons */
+}
+
+/* Carousel Slide */
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel Images */
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop and fit properly */
+    border-radius: 10px;
+    padding: 10px; /* Space around images */
+    margin: 0 auto;
+}
+
+/* Navigation Buttons */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Food Menu */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gradient-text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+.gradient-text1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #cf730b, #931946);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.menu-heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px rgba(229, 46, 113, 0.6);
+    position: relative;
+    padding: 10px 0;
+}
+
+/* Underline Animation Effect */
+.menu-heading::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% { text-shadow: 0 0 10px rgba(229, 46, 113, 0.8); }
+    50% { text-shadow: 0 0 20px rgba(229, 46, 113, 1); }
+    100% { text-shadow: 0 0 10px rgba(229, 46, 113, 0.8); }
+}
+
+.menu-heading {
+    animation: glow 2s infinite alternate;
+}
+
+/* Item Container */
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    padding: 10px;
+    margin: 10px auto;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Price Text */
+.item span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Button Styling */
+.add-to-cart, .increment, .decrement {
+    background: white;
+    color: #e52e71;
+    font-weight: bold;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.add-to-cart:hover, .increment:hover, .decrement:hover {
+    background: #e52e71;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Cart Styling */
+.cart {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    margin: 10px auto;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item span {
+    font-weight: bold;
+}
+
+/* Total Price */
+.total-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e52e71;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.food-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.food-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.add-to-cart {
+    background: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Cart */
+#cart {
+    text-align: center;
+    padding: 50px;
+}
+
+#checkout-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #121212;
+    color: white;
+}
