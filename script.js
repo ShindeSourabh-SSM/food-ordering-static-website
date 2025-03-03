@@ -17,13 +17,20 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
 
 const cartItems = document.getElementById("cart-items");
 const totalPriceElement = document.querySelector(".total-price");
+const cartCountElement = document.getElementById("cart-count");
 
 let cart = {
     Pizza: { price: 250, quantity: 0 },
     Burger: { price: 150, quantity: 0 }
 };
 
-// Function to update the cart
+// Function to update the cart count
+function updateCartCount() {
+    let totalCount = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
+    cartCountElement.innerText = totalCount;
+}
+
+// Function to update the cart UI
 function updateCart() {
     cartItems.innerHTML = ""; // Clear previous cart items
     let total = 0;
@@ -44,6 +51,9 @@ function updateCart() {
 
     // Update total price
     totalPriceElement.innerText = `Total: ₹${total}`;
+    
+    // Update cart count in the navbar
+    updateCartCount();
 }
 
 // Event listeners for increment and decrement buttons
