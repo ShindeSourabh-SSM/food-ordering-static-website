@@ -6,7 +6,9 @@ A visually appealing static **Food Ordering Website** designed to showcase an en
 
 
 ## 🌐 Live Demo
-🔗 [View Live Site on Vercel]([https://your-vercel-link.vercel.app/](https://food-ordering-static-website-3ooy.vercel.app/))
+🔗 [View Live Site on Vercel]
+https://food-ordering-static-website-3ooy.vercel.app/
+
 
 ## 📌 Features
 - 🍕 **Modern UI** – Clean, attractive, and responsive design.
@@ -25,7 +27,8 @@ A visually appealing static **Food Ordering Website** designed to showcase an en
 ## 📷 Screenshots
 
 ### 🏠 Home Page
-![Home Page](screenshot-home.png)
+![Screenshot 2025-03-04 131003](https://github.com/user-attachments/assets/5c6a9cf6-173f-4889-9370-8a3a87f9a621)
+
 
 ### 📜 Menu Page
 ![Screenshot 2025-03-03 230515](https://github.com/user-attachments/assets/5b3bfe82-e229-4965-8bdf-2dcd5823bf29)
